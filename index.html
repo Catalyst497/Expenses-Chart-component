@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/index.css" />
+		<script defer src="js/index.js"></script>
+		<title>Frontend Mentor | Expenses chart component</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Header -->
+		<div class="container">
+			<header id="balance">
+				<div class="flex-zero">
+					<div class="head">My balance</div>
+					<h1 class="balance">$921.48</h1>
+				</div>
+				<div class="logo flex-one">
+					<img src="images/logo.svg" alt="logo" />
+				</div>
+			</header>
+
+			<div class="content">
+				<h1 class="topic">Spending - Last 7 days</h1>
+				<ul>
+					<li>
+						<div class="bar"></div>
+						<div class="day">mon</div>
+					</li>
+					<li>
+						<div class="bar"></div>
+						<div class="day">tue</div>
+					</li>
+					<li class="today">
+						<div class="bar"></div>
+						<div class="day">wed</div>
+					</li>
+					<li>
+						<div class="bar"></div>
+						<div class="day">thu</div>
+					</li>
+					<li>
+						<div class="bar"></div>
+						<div class="day">fri</div>
+					</li>
+					<li>
+						<div class="bar"></div>
+						<div class="day">sat</div>
+					</li>
+					<li>
+						<div class="bar"></div>
+						<div class="day">sun</div>
+					</li>
+				</ul>
+				<hr />
+
+				<div class="summary">
+					<div class="head">Total this month</div>
+					<div>
+						<h1>$478.33</h1>
+						<div>
+							<div>+2.4%</div>
+							<div>from last month</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Daniel Duyilemi</a>.
+		</div>
+	</body>
+</html>

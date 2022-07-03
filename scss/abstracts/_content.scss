@@ -1,0 +1,108 @@
+div.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 450px;
+}
+@mixin contents {
+	border-radius: 0.8rem;
+	@include margin-block(0.6rem, 0.6rem);
+	padding: 1rem;
+}
+#balance {
+	@include contents;
+	background-color: $soft-red;
+	@extend .flex;
+	color: $pale-orange;
+}
+div.content {
+	@include contents;
+	background-color: $pale-orange;
+	> h1 {
+		@include padding-inline(0.2rem, 0);
+	}
+	> ul {
+		@extend .flex;
+		align-items: flex-end;
+		@include margin-block(1rem, 1rem);
+		height: 180px;
+		list-style-type: none;
+		li {
+			.bar {
+				position: relative;
+				height: 3rem;
+				background-color: $soft-red;
+				border-radius: 0.3rem;
+				width: 2rem;
+				transition: background-color 300ms ease-out;
+				&:hover {
+					background-color: lighten($soft-red, 15);
+				}
+				&::before {
+					content: attr(data-title);
+					position: absolute;
+					background-color: $dark-brown;
+					color: $pale-orange;
+					font-size: 0.7rem;
+					font-weight: $f-bold;
+					text-align: center;
+					top: -1.5rem;
+					left: 50%;
+					border-radius: 0.3rem;
+					overflow: hidden;
+					max-height: 0;
+					padding: 0;
+					transform: translateX(-50%);
+				}
+				&:hover::before {
+					padding: 0.2rem;
+					max-height: 200px;
+					transition: max-height 1s ease-in-out;
+				}
+			}
+			.day {
+				text-align: center;
+				font-size: 0.7rem;
+				color: $medium-brown;
+				font-weight: $f-light;
+				@include padding-block(0.3rem, 0.3rem);
+			}
+		}
+		li:nth-of-type(3) > .bar {
+			background-color: $cyan;
+			&:hover {
+				background-color: lighten($cyan, 15);
+			}
+		}
+	}
+	hr {
+		margin: auto;
+		width: 97%;
+		height: 1px;
+		background-color: $medium-brown;
+		opacity: 0.3;
+	}
+	.summary {
+		@include margin-block(1rem, 1rem);
+		color: $medium-brown;
+		div:nth-of-type(2) {
+			@extend .flex;
+			> div > div:nth-of-type(1) {
+				color: $dark-brown;
+				text-align: end;
+				font-weight: 700;
+			}
+			h1 {
+				color: $dark-brown;
+				font-size: 2rem;
+			}
+		}
+	}
+}
+.attribution {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom: 1rem;
+}
