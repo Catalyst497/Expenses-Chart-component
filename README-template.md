@@ -36,9 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/Catalyst497/Expenses-Chart-component.git]
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
-## My process
+- Live Site URL: [https://catalyst497.github.io/Expenses-Chart-component/]
 
 ### Built with
 
@@ -48,7 +46,7 @@ Users should be able to:
 
 ### What I learned
 
-I project helped sharpen my skills a little bit with API. It was fun.
+The project helped sharpen my skills a little bit with API. It was fun.
 
 ## Author
 
